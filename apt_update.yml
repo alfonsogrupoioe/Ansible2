@@ -1,0 +1,15 @@
+---
+  - name: "Realizando apt update y apt upgrade"
+
+    hosts: ubuntu
+    tasks:
+
+    - name: "apt update"
+      apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+      register: "salida"
+    
+    - name: "apt upgrade"
+      apt: upgrade=dist force_apt_get=yes
+      register: "salida"
+
+    - debug: var=salida.stdout_lines
