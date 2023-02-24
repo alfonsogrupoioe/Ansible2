@@ -1,5 +1,5 @@
 ---
-  - name: "Playing with Ansible."
+  - name: "Jugando con Ansible."
 # Ansible Playbook will run on the Localhost where AWX is installed
     hosts: ubuntu
     tasks:
