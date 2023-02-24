@@ -7,6 +7,6 @@
 # Below task will execute the list of directories and files present
     - name: "Ejecuta el comando ls -lrt"
       shell: "ls -lrt"
-      register: "Salida"
+      register: "salida"
 # The Output of the above task will be displayed on the Screen
     - debug: var=salida.stdout_lines
