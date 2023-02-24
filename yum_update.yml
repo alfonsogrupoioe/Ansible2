@@ -1,0 +1,11 @@
+---
+  - name: "Actualizar paquetes yum."
+
+    hosts: centos
+    tasks:
+
+    - name: "Ejecuta el comando yum update"
+      shell: "yum update -y --skip-broken"
+      register: "salida"
+
+    - debug: var=salida.stdout_lines
