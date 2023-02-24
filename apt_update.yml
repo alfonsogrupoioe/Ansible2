@@ -6,10 +6,10 @@
 
     - name: "apt update"
       apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
-      register: "salida"
+      register: "comando1"
+    - debug: var=comando1.stdout_lines
     
     - name: "apt upgrade"
       apt: upgrade=dist force_apt_get=yes
-      register: "salida"
-
-    - debug: var=salida.stdout_lines
+      register: "comando2"
+    - debug: var=comando2.stdout_lines
